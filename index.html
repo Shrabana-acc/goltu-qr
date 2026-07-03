@@ -1,123 +1,314 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 
 <head>
-
-    <title>Hi I am Goltu and I am Lost!</title>
-
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <meta name="viewport"
-          content="width=device-width, initial-scale=1">
+    <title>🐱 Hi! I'm Goltu</title>
 
-    <link rel="stylesheet"
-          href="style.css">
+    <link rel="stylesheet" href="style.css">
 
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet">
 </head>
 
 <body>
 
-<div class="container">
+    <!-- Floating Background -->
 
-<img src="images/goltu.jpeg"
-     class="cat">
+    <div class="background">
+      <span class="paw paw1">🐾</span>
+      <span class="paw paw2">🐾</span>
+      <span class="paw paw3">🐾</span>
+      <span class="paw paw4">🐾</span>
+      <span class="paw paw5">🐾</span>
+      <span class="paw paw6">🐾</span>
+      <span class="paw paw7">🐾</span>
+      <span class="paw paw8">🐾</span>
+    </div>
 
-<h1>🐱 Meet Goltu</h1>
+    <div class="container">
 
-<p>
-If you found me,
-please contact my hooman cats.
-</p>
+        <!-- Hero Section -->
 
-<div class="card">
+        <section class="hero">
 
-<h2>Name</h2>
+            <div class="lost-badge">
+                🥺 I'm Lost
+            </div>
 
-<p>Goltu</p>
+            <h1>🐱 Hi! I'm Goltu</h1>
 
-</div>
+            <p id="greeting"></p>
 
-<div class="card">
+            <p class="hero-text">
 
-<h2>Location</h2>
+                If you found me, please help me get back to my cats.
 
-<p>Srinivasa's Signature Apartments, Bellandur, Bengaluru</p>
+                Otherwise they get weird. ❤️
 
-</div>
+            </p>
 
-<div class="card">
+        </section>
 
-<h2>Breed</h2>
+        <!-- Photo Gallery -->
 
-<p>Indian Domestic Cat- White</p>
+        <section class="gallery-section">
 
-</div>
+            <div class="gallery" id="gallery">
 
-<div class="card">
+                <img src="images/goltu1.jpeg" alt="Goltu">
 
-<h2>Color</h2>
+                <img src="images/goltu2.jpeg" alt="Goltu">
 
-<p>Orange & White</p>
+                <img src="images/goltu3.jpeg" alt="Goltu">
 
-</div>
+            </div>
 
-<div class="card">
+        </section>
 
-<h2>Medical</h2>
+        <!-- Cute Message -->
 
-<p>
-Vaccinated.
-Friendly.
-Neutered.
-Age is ~1year.
-Loves wet catfood, egg, fish and chicken - all boiled with water.
-</p>
+        <section class="quote-card">
 
-</div>
+            <p id="randomMessage"></p>
 
-<div class="card">
+        </section>
 
-<h2>Me-Owner</h2>
+        <!-- About -->
 
-<p>Shrabana</p>
-<p>Som</p>
-<p>Palash</p>
-<p>Disha</p>
-<p>Srayya</p>
-<p>Avik</p>
+        <section class="card">
 
-</div>
+            <h2>🐾 About Me</h2>
 
-<div class="card">
+            <div class="info-grid">
 
-<h2>Phone</h2>
+                <div class="info-item">
+                    <h3>Name</h3>
+                    <p>Goltu</p>
+                </div>
 
-<a href="tel:+919999999999">
-+91 99999 99999
-</a>
+                <div class="info-item">
+                    <h3>Breed</h3>
+                    <p>Indian Domestic Cat</p>
+                </div>
 
-</div>
+                <div class="info-item">
+                    <h3>Color</h3>
+                    <p>White with ginger highlights on his head</p>
+                </div>
 
-<div class="buttons">
+                <div class="info-item">
+                    <h3>Gender</h3>
+                    <p>Male</p>
+                </div>
 
-<a class="button"
-href="tel:+919999999999">
+            </div>
 
-📞 Call
+        </section>
 
-</a>
+        <!-- Health -->
 
-<a class="button"
+        <section class="card">
 
-href="https://wa.me/919999999999">
+            <h2>🏥 Health Information</h2>
 
-WhatsApp
+            <div class="info-grid">
 
-</a>
+                <div class="info-item">
+                    <h3>Vaccination</h3>
+                    <p>✅ Vaccinated</p>
+                </div>
 
-</div>
+                <div class="info-item">
+                    <h3>Neutered</h3>
+                    <p>✅ Yes</p>
+                </div>
 
-</div>
+                <div class="info-item">
+                    <h3>Age</h3>
+                    <p id="age"></p>
+                </div>
+
+                <div class="info-item">
+                    <h3>Birthday</h3>
+                    <p id="birthdayCountdown"></p>
+                </div>
+
+            </div>
+
+        </section>
+
+        <!-- Favourite Things -->
+
+        <section class="card">
+
+            <h2>🍗 My Favourite Things</h2>
+
+            <ul class="favorites">
+
+                <li>🐟 Boiled Fish</li>
+
+                <li>🍗 Boiled Chicken</li>
+
+                <li>🥚 Eggs</li>
+
+                <li>🥫 Wet Cat Food</li>
+
+
+            </ul>
+
+        </section>
+
+        <!-- Personality -->
+
+        <section class="card">
+
+            <h2>😺 My Personality</h2>
+
+            <ul class="favorites">
+
+                <li>❤️ Friendly with people</li>
+
+                <li>🐾 Curious</li>
+
+                <li>😴 Loves sleeping</li>
+
+                <li>🎈 Loves playing</li>
+
+                <li>🥺 I may be scared if I'm outside for too long.</li>
+
+            </ul>
+
+        </section>
+
+        <!-- Missing -->
+
+        <section class="card">
+
+            <h2>📍 Missing Information</h2>
+
+            <div class="info-grid">
+
+                <div class="info-item">
+
+                    <h3>Last Seen</h3>
+
+                    <p>Srinivasa Signature Apartments<br>Bellandur, Bengaluru</p>
+
+                </div>
+
+                <div class="info-item">
+
+                    <h3>Missing Since</h3>
+
+                    <p id="daysLost"></p>
+
+                </div>
+
+            </div>
+
+        </section>
+
+        <!-- Owners -->
+
+        <section class="card">
+
+            <h2>❤️ MeOwners</h2>
+
+            <div class="owners">
+
+                <span>Shrabana</span>
+
+                <span>Som</span>
+
+                <span>Palash</span>
+
+                <span>Disha</span>
+
+                <span>Srayya</span>
+
+                <span>Avik</span>
+
+            </div>
+
+        </section>
+
+        <!-- Contact -->
+
+        <section class="card">
+
+            <h2>☎ Contact Immediately</h2>
+
+            <h3 id="phoneNumber">
+                +91 99999 99999
+            </h3>
+
+            <div class="button-group">
+
+                <a href="tel:+919999999999" class="btn call">
+
+                    📞 Call
+
+                </a>
+
+                <a href="https://wa.me/919999999999" class="btn whatsapp">
+
+                    💬 WhatsApp
+
+                </a>
+
+            </div>
+
+            <div class="button-group">
+
+                <button id="copyPhone" class="btn secondary">
+
+                    📋 Copy Number
+
+                </button>
+
+                <button id="shareLocation" class="btn secondary">
+
+                    📍 I Found Goltu
+
+                </button>
+
+            </div>
+
+        </section>
+
+        <!-- Footer -->
+
+        <footer>
+
+            <h2>🐾 Thank You</h2>
+
+            <p>
+
+                Thank you for taking the time to scan my QR code.
+
+                My family is worried about me, help me get back to them safely. Or whatever, I don't care. Give me food and I'm good!😼
+
+            </p>
+
+            <p class="footer-love">
+
+                Love,
+
+                <strong>Goltu ❤️</strong>
+
+            </p>
+
+        </footer>
+
+    </div>
+
+    <script src="script.js"></script>
 
 </body>
 

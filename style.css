@@ -1,69 +1,589 @@
+/* ==========================
+   RESET
+========================== */
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+html{
+    scroll-behavior:smooth;
+}
+
 body{
 
-font-family:Arial;
+    font-family:'Poppins',sans-serif;
 
-background:#f7f7f7;
+    color:#444;
 
-margin:0;
+    overflow-x:hidden;
 
-padding:20px;
+    background:
+        radial-gradient(circle at 15% 20%, rgba(255,220,180,.45), transparent 28%),
+        radial-gradient(circle at 85% 15%, rgba(255,236,190,.35), transparent 22%),
+        radial-gradient(circle at 80% 80%, rgba(255,210,170,.35), transparent 26%),
+        radial-gradient(circle at 20% 85%, rgba(255,245,220,.45), transparent 25%),
+        linear-gradient(180deg,#FFFDF9,#FFF4E6,#FFEFD8);
 
 }
+
+/* ==========================
+   BACKGROUND PAWS
+========================== */
+
+.background{
+
+    position:fixed;
+
+    top:0;
+    left:0;
+
+    width:100%;
+    height:100%;
+
+    pointer-events:none;
+
+    overflow:hidden;
+
+    z-index:0;
+
+}
+
+.paw{
+
+    position:absolute;
+
+    font-size:42px;
+
+    opacity:.08;
+
+    animation:floatPaw 18s infinite ease-in-out;
+
+    filter:blur(.2px);
+
+}
+
+.paw1{
+
+    top:8%;
+    left:6%;
+
+    animation-delay:0s;
+
+}
+
+.paw2{
+
+    top:28%;
+    right:10%;
+
+    animation-delay:4s;
+
+}
+
+.paw3{
+
+    bottom:22%;
+    left:14%;
+
+    animation-delay:8s;
+
+}
+
+.paw4{
+
+    bottom:10%;
+    right:18%;
+
+    animation-delay:12s;
+
+}
+
+.paw5{
+
+    top:62%;
+    left:45%;
+
+    animation-delay:16s;
+
+}
+
+@keyframes floatPaw{
+
+0%{
+
+transform:
+translateY(0px)
+rotate(-8deg);
+
+}
+
+50%{
+
+transform:
+translateY(-22px)
+rotate(8deg);
+
+}
+
+100%{
+
+transform:
+translateY(0px)
+rotate(-8deg);
+
+}
+
+}
+
+/* ==========================
+   CONTAINER
+========================== */
 
 .container{
 
-max-width:500px;
+    position:relative;
 
-margin:auto;
-
-background:white;
-
-padding:25px;
-
-border-radius:15px;
-
-box-shadow:0 5px 20px rgba(0,0,0,.15);
-
-text-align:center;
+    z-index:2;
 
 }
 
-.cat{
+/* ==========================
+   HERO
+========================== */
 
-width:200px;
+.hero{
 
-border-radius:20px;
+    text-align:center;
 
-margin-bottom:20px;
+    margin-bottom:40px;
+
+}
+
+.lost-badge{
+
+    display:inline-block;
+
+    background:#FF6B6B;
+
+    color:white;
+
+    padding:12px 24px;
+
+    border-radius:40px;
+
+    font-weight:600;
+
+    animation:pulse 2s infinite;
+
+}
+
+@keyframes pulse{
+
+0%{transform:scale(1);}
+50%{transform:scale(1.05);}
+100%{transform:scale(1);}
+
+}
+
+.hero h1{
+
+    margin-top:25px;
+
+    font-size:3rem;
+
+    color:#FF8C42;
+
+}
+
+#greeting{
+
+    margin-top:15px;
+
+    color:#777;
+
+    font-weight:500;
+
+}
+
+.hero-text{
+
+    max-width:650px;
+
+    margin:20px auto 0;
+
+    line-height:1.8;
+
+    font-size:1.08rem;
+
+}
+
+/* ==========================
+   GALLERY
+========================== */
+
+.gallery{
+
+    display:flex;
+
+    gap:20px;
+
+    overflow-x:auto;
+
+    scroll-snap-type:x mandatory;
+
+    scrollbar-width:none;
+
+    padding-bottom:10px;
+
+}
+
+.gallery::-webkit-scrollbar{
+
+    display:none;
+
+}
+
+.gallery img{
+
+    flex:0 0 85%;
+
+    height:350px;
+
+    object-fit:cover;
+
+    border-radius:22px;
+
+    scroll-snap-align:center;
+
+    box-shadow:0 15px 35px rgba(0,0,0,.15);
+
+    transition:.35s;
+
+}
+
+.gallery img:hover{
+
+    transform:scale(1.02);
+
+}
+
+/* ==========================
+   RANDOM MESSAGE
+========================== */
+
+.quote-card{
+
+    margin:35px 0;
+
+    padding:22px;
+
+    background:#FFF7DA;
+
+    border-left:8px solid #FFB347;
+
+    border-radius:18px;
+
+    text-align:center;
+
+    font-style:italic;
+
+    font-size:1.05rem;
+
+}
+
+/* ==========================
+   CARDS
+========================== */
+
+.card{
+
+    margin-top:28px;
+
+    padding:28px;
+
+    border-radius:25px;
+
+    background:rgba(255,255,255,.75);
+
+    backdrop-filter:blur(12px);
+
+    box-shadow:0 12px 30px rgba(0,0,0,.08);
+
+    border:1px solid rgba(255,255,255,.6);
+
+}
+
+.card h2{
+
+    color:#FF8C42;
+
+    margin-bottom:22px;
+
+}
+
+/* ==========================
+   GRID
+========================== */
+
+.info-grid{
+
+    display:grid;
+
+    grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+
+    gap:18px;
+
+}
+
+.info-item{
+
+    background:white;
+
+    border-radius:18px;
+
+    padding:18px;
+
+    transition:.3s;
+
+}
+
+.info-item:hover{
+
+    transform:translateY(-6px);
+
+    box-shadow:0 10px 25px rgba(0,0,0,.08);
+
+}
+
+.info-item h3{
+
+    color:#FF8C42;
+
+    margin-bottom:8px;
+
+}
+
+/* ==========================
+   FAVORITES
+========================== */
+
+.favorites{
+
+    list-style:none;
+
+    display:grid;
+
+    gap:14px;
+
+}
+
+.favorites li{
+
+    background:white;
+
+    border-radius:15px;
+
+    padding:15px 18px;
+
+    transition:.25s;
+
+}
+
+.favorites li:hover{
+
+    transform:translateX(8px);
+
+}
+
+/* ==========================
+   OWNERS
+========================== */
+
+.owners{
+
+    display:flex;
+
+    flex-wrap:wrap;
+
+    gap:12px;
+
+}
+
+.owners span{
+
+    background:#FFE2C2;
+
+    padding:10px 18px;
+
+    border-radius:30px;
+
+    font-weight:600;
+
+}
+
+/* ==========================
+   BUTTONS
+========================== */
+
+.button-group{
+
+    display:flex;
+
+    justify-content:center;
+
+    flex-wrap:wrap;
+
+    gap:15px;
+
+    margin-top:20px;
+
+}
+
+.btn{
+
+    padding:15px 28px;
+
+    border:none;
+
+    border-radius:50px;
+
+    cursor:pointer;
+
+    text-decoration:none;
+
+    font-size:1rem;
+
+    font-weight:600;
+
+    transition:.3s;
+
+}
+
+.call{
+
+    background:#FF8C42;
+
+    color:white;
+
+}
+
+.whatsapp{
+
+    background:#25D366;
+
+    color:white;
+
+}
+
+.secondary{
+
+    background:white;
+
+    color:#444;
+
+}
+
+.btn:hover{
+
+    transform:translateY(-5px);
+
+    box-shadow:0 10px 25px rgba(0,0,0,.18);
+
+}
+
+/* ==========================
+   PHONE NUMBER
+========================== */
+
+#phoneNumber{
+
+    text-align:center;
+
+    margin-bottom:15px;
+
+    color:#444;
+
+}
+
+/* ==========================
+   FOOTER
+========================== */
+
+footer{
+
+    margin-top:60px;
+
+    text-align:center;
+
+}
+
+footer h2{
+
+    color:#FF8C42;
+
+    margin-bottom:15px;
+
+}
+
+.footer-love{
+
+    margin-top:20px;
+
+    font-size:1.2rem;
+
+    color:#FF8C42;
+
+}
+
+/* ==========================
+   RESPONSIVE
+========================== */
+
+@media(max-width:768px){
+
+.hero h1{
+
+    font-size:2.2rem;
+
+}
+
+.hero-text{
+
+    font-size:1rem;
+
+}
+
+.gallery img{
+
+    height:280px;
+
+    flex:0 0 92%;
 
 }
 
 .card{
 
-background:#fafafa;
-
-padding:15px;
-
-margin:10px;
-
-border-radius:10px;
+    padding:22px;
 
 }
 
-.button{
+.button-group{
 
-display:inline-block;
-
-padding:12px 25px;
-
-background:#2196F3;
-
-color:white;
-
-text-decoration:none;
-
-border-radius:8px;
-
-margin:8px;
+    flex-direction:column;
 
 }
+
+.btn{
+
+    width:100%;
+
+}
+
+}
+
+/* ==========================
+   DARK MODE
+========================== */
